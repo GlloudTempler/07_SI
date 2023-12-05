@@ -71,7 +71,8 @@ public class DeptController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
+    
+    // 부서 생성
     @PostMapping("/dept")
     public ResponseEntity<Object> createDept(@RequestBody Dept dept) {
         try{
@@ -83,7 +84,8 @@ public class DeptController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
+    
+    // 부서 수정
     @PutMapping("/dept/{dno}")
     public ResponseEntity<Object> updateDept(
             @PathVariable int dno,
@@ -97,7 +99,8 @@ public class DeptController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
-
+    
+    // 상세 조회
     @GetMapping("/dept/{dno}")
     public ResponseEntity<Object> findByID(@PathVariable int dno) {
         try {
@@ -113,6 +116,8 @@ public class DeptController {
             return new ResponseEntity<>(HttpStatus.INTERNAL_SERVER_ERROR);
         }
     }
+    
+    // 부서 삭제
     @DeleteMapping("/dept/deletion/{dno}")
     public ResponseEntity<Object> deleteDept(@PathVariable int dno) {
         try{

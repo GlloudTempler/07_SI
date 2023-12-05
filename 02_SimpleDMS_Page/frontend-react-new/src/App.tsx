@@ -33,6 +33,27 @@ import AddReplyBoard from "./pages/normal/reply-board/AddReplyBoard";
 import ReplyBoard from "./pages/normal/reply-board/ReplyBoard";
 import AddThreadBoard from "./pages/normal/thread-board/AddThreadBoard";
 import ThreadBoard from "./pages/normal/thread-board/ThreadBoard";
+import CodeCategoryList from "./pages/admin/CodeCategoryList";
+import AddCodeCategory from "./pages/admin/AddCodeCategory";
+import CodeList from "./pages/admin/CodeList";
+import AddCode from "./pages/admin/AddCode";
+import Code from "./pages/admin/Code";
+import SimpleProductList from "./pages/shop/simple-product/SimpleProductList";
+import ProductList from "./pages/shop/product/ProductList";
+import AddSimpleProduct from "./pages/shop/simple-product/AddSimpleProduct";
+import AddProduct from "./pages/shop/product/AddProduct";
+import SimpleProduct from "./pages/shop/simple-product/SimpleProduct";
+import Product from "./pages/shop/product/Product";
+import SimpleCart from "./pages/shop/simple-product/SimpleCart";
+import SimpleCartList from "./pages/shop/simple-product/SimpleCartList";
+import CinemaList from "./pages/shop/cinema/CinemaList";
+import Cinema from "./pages/shop/cinema/Cinema";
+import ThemeBasicList from "./pages/shop/theme-load/ThemeBasicList";
+import ThemeLoadList from "./pages/shop/theme-load/ThemeRoadList";
+import ThemeRoadList from "./pages/shop/theme-load/ThemeRoadList";
+import FileDbList from "./pages/advanced/FileDbList";
+import AddFileDb from "./pages/advanced/AddFileDb";
+import FileDb from "./pages/advanced/FileDb";
 
 function App() {
   return (
@@ -95,8 +116,45 @@ function App() {
           <Route path="/thread-board" element={<ThreadBoardList />} />
           <Route path="/add-thread-board" element={<AddThreadBoard />} />
           <Route path="/thread-board/tid/:tid/tparent/:tparent" element={<ThreadBoard />} />
+
+          {/* Code-category */}
+          <Route path="/code-category" element={<CodeCategoryList/>} />
+          <Route path="/add-code-category" element={<AddCodeCategory/>} />
+
+          {/* code */}
+          <Route path="/code" element={<CodeList/>} />
+          <Route path="/add-code" element={<AddCode/>} />
+          <Route path="/code/:codeId" element={<Code/>} />
+
+          {/* simple-product */}
+          <Route path="/simple-product" element={<SimpleProductList/>} />
+          <Route path="/add-simple-product" element={<AddSimpleProduct/>} />
+          <Route path="/simple-product/:spno" element={<SimpleProduct/>} />
+          <Route path="/simple-cart/:spno" element={<SimpleCart/>} />
+          <Route path="/simple-cart" element={<SimpleCartList/>} />
+
+
+          {/* product */}
+          <Route path="/product" element={<ProductList/>} />
+          <Route path="/add-product" element={<AddProduct/>} />
+          <Route path="/product/:pno" element={<Product/>} />
+
+          {/* cinema */}
+          <Route path="/cinema" element={<CinemaList/>} />
+          <Route path="/cinema/:movieCd" element={<Cinema/>} />
+
+          {/* 부산 테마길(busan theme load) */}
+          <Route path="/theme-basic" element={<ThemeBasicList/>} />
+          <Route path="/theme-road" element={<ThemeRoadList/>} />
+
+          {/* file upload */}
+          <Route path="/fileDb" element={<FileDbList/>} />
+          <Route path="/add-fileDb" element={<AddFileDb/>} />
+          <Route path="/fileDb/:uuid" element={<FileDb/>} />
           
 
+
+          
           {/* NotFound */}
           <Route path="*" element={<NotFound />} />
         </Routes>

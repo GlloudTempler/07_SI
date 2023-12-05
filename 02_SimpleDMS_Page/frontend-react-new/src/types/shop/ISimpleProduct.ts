@@ -1,0 +1,8 @@
+export default interface ISimpleProduct {
+    spno?: any | null,
+    codeId: number,
+    title: string,
+    imgPath: string,
+    unitPrice: number,
+    useYn: string
+}

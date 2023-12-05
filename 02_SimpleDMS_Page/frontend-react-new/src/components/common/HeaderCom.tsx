@@ -290,12 +290,12 @@ function HeaderCom() {
 
                       {/* <!-- 4행 시작--> */}
                       <li className="sidebar-nav-item col-3">
-                        <a href="/thema-load" className="nav-link active ms-2">
+                        <a href="/theme-road" className="nav-link active ms-2">
                           Thema Load(공공)
                         </a>
                       </li>
                       <li className="sidebar-nav-item col-3">
-                        <a href="/thema-basic" className="nav-link active ms-2">
+                        <a href="/theme-basic" className="nav-link active ms-2">
                           Thema Basic(연습)
                         </a>
                       </li>

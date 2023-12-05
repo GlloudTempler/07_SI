@@ -18,3 +18,16 @@ import Pagination from '@mui/material/Pagination';
 # 5) typescript jquery, jqueryui type 넣기
 # 5-1) typescript jquery 사용
 npm i --save-dev @types/jquery
+<!-- jqueryui type 설치 -->
+npm i @types/jqueryui
+
+# 6) 공통코드 : 프로젝트 시작 시 코드체계를 정의하고
+# 각각의 테이블에서 사용하는 목적으로 씀
+# ex) 온라인 쇼핑물 프로젝트 : 
+#       - 공통 코드 대상 : 주문 -> 결제 -> 배송 -> 확정
+#       - 예시 테이블 : 상품명(아우터) - 상태명(결제) : 컬럼명
+#       - 공통 코드 : 주문 == 10001
+#       - 공통 코드 : 결제 == 10002
+#       - 공통 코드 : 결제 == 10003
+#       - 공통 코드 : 결제 == 10004
+# - 관리 개선(공통 코드 적용) : 상품명(아우터) - 상태명(10002)
